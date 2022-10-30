@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(4, 4, 33);
+  overflow-x: hidden;
+}
+
+.backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.384);
+  z-index: 2;
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 1s;
+}
+.backdrop-close {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner {
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+}
+
+.add-post {
+  padding: 15px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background-color: rgb(236, 236, 236);
+  border-radius: 10px;
+}
+.add-post .user-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.add-post .user-info .user-photo {
+  text-align: center;
+}
+.add-post .user-info .user-photo img {
+  width: 50%;
+}
+.add-post .user-info .user-name {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.add-post .post-form {
+  display: grid;
+  grid-template-columns: auto;
+  height: 190px;
+  grid-template-rows: 25% 75%;
+}
+.add-post .post-form input {
+  padding: 10px;
+  font-size: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+.add-post .post-form input:focus {
+  outline: none;
+}
+.add-post .post-form textarea {
+  resize: none;
+  padding: 10px;
+  font-size: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+.add-post .post-form textarea:focus {
+  outline: none;
+}
+
+.posts {
+  margin-top: 20px;
+}
+.posts .post {
+  background-color: rgb(95, 177, 255);
+  display: grid;
+  grid-template-columns: 4fr 15fr 1fr;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.posts .post .user-info {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 4fr 1fr;
+  row-gap: 10px;
+}
+.posts .post .user-info .image {
+  text-align: center;
+  background-color: rgb(210, 210, 210);
+  margin-bottom: 5px;
+  height: 100%;
+}
+.posts .post .user-info .image img {
+  width: 100%;
+  height: 100%;
+}
+.posts .post .user-info .name {
+  text-align: center;
+  font-size: 20px;
+}
+.posts .post .content .title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.posts .post .content .body {
+  font-size: 18px;
+}
+.posts .post .post-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  font-size: 20px;
+}
+.posts .post .post-settings i {
+  color: rgb(50, 50, 50);
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+.posts .post .post-settings i:hover {
+  color: black;
+}/*# sourceMappingURL=style.css.map */
